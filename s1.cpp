@@ -16,7 +16,7 @@ void test01()
 		cout << "Enter your number?\n";
 		cin >> x;
 		//temp = InsertH(temp, x);
-		InsertHead(&temp, x);
+		DoubleInsertHead(&temp, x);
 		PrintList(temp);
 		temp = ReverseList(temp);
 	}
@@ -112,5 +112,19 @@ void DoubleInsertHead(Node**head,int x)
 {
 	Node* temp;
 	temp = WriteNode(x);
-
+	if (*head != NULL)
+	{
+		temp->pre = NULL;
+		temp->next = *head;
+		(*head)->pre = temp;
+	}
+	*head = temp;
+}
+Node* WriteNode(int x)
+{
+	Node* temp = new Node;
+	temp->am = x;
+	temp->pre = NULL;
+	temp->next = NULL;
+	return temp;
 }

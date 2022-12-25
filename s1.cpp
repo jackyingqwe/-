@@ -16,11 +16,12 @@ void test01()
 		cout << "Enter your number?\n";
 		cin >> x;
 		//temp = InsertH(temp, x);
-		InsertHead(&temp, x);
-		PrintList(temp);
+		DoubleInsertHead(&temp, x);
 		temp = ReverseList(temp);
-		PrintList(temp);
 	}
+	PrintListSort(temp, 2);
+
+	temp = ReverseListSort(temp, temp);
 	cout << "这是反转";
 	
 	PrintListSort(temp, 2);
@@ -91,4 +92,39 @@ void PrintListSort(Node* head, int type_code)
 		PrintListSort(head->next,2);
 	}
 
+}
+
+Node* ReverseListSort(Node* chu,Node*head)
+{
+	if (chu->next == NULL)
+	{
+		head = chu;
+		return head;
+	}
+	head = ReverseListSort(chu->next,head);
+	chu->next->next = chu;
+	chu->next = NULL;
+	cout << head->am;
+	return head;
+}
+void DoubleInsertHead(Node**head,int x)
+{
+	Node* temp;
+	temp = WriteNode(x);
+
+	if (*head != NULL)
+	{
+		temp->pre = NULL;
+		temp->next = *head;
+		(*head)->pre = temp;	
+	}
+	*head = temp;
+}
+Node* WriteNode(int x)
+{
+	Node* temp = new Node;
+	temp->am = x;
+	temp->pre = NULL;
+	temp->next = NULL;
+	return temp;
 }

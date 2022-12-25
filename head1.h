@@ -26,3 +26,8 @@ Node* ReverseListSort(Node* chu,Node*head);
 Node* WriteNode(int x);
 //将节点链接
 void DoubleInsertHead(Node** head, int x);
+
+
+
+
+//stsck

@@ -18,7 +18,6 @@ void test01()
 		//temp = InsertH(temp, x);
 		InsertHead(&temp, x);
 		PrintList(temp);
-		PrintListSort(temp, 1);
 		temp = ReverseList(temp);
 		PrintList(temp);
 	}
@@ -74,7 +73,7 @@ Node* ReverseList(Node*head) {
 	return head;
 }
  
-void PrintListSort(Node* head,int type_code)
+void PrintListSort(Node* head, int type_code)
 {
 	if (head == NULL) 
 	{		
@@ -83,13 +82,13 @@ void PrintListSort(Node* head,int type_code)
 	}
 	if (type_code == 1)
 	{
-		PrintList(head->next);
+		PrintListSort(head->next,1);
 		cout << head->am;
 	}
 	else if (type_code == 2)
 	{		
 		cout << head->am;
-		PrintList(head->next);
+		PrintListSort(head->next,2);
 	}
 
 }

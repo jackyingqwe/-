@@ -18,13 +18,13 @@ void test01()
 		//temp = InsertH(temp, x);
 		InsertHead(&temp, x);
 		PrintList(temp);
-		PrintList1(temp, 1);
+		PrintListSort(temp, 1);
 		temp = ReverseList(temp);
 		PrintList(temp);
 	}
 	cout << "这是反转";
 	
-	PrintList1(temp, 2);
+	PrintListSort(temp, 2);
 
 }
 
@@ -74,7 +74,7 @@ Node* ReverseList(Node*head) {
 	return head;
 }
  
-void PrintList1(Node* head,int type_code)
+void PrintListSort(Node* head,int type_code)
 {
 	if (head == NULL) 
 	{		

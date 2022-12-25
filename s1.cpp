@@ -18,9 +18,13 @@ void test01()
 		//temp = InsertH(temp, x);
 		InsertHead(&temp, x);
 		PrintList(temp);
+		PrintList1(temp, 1);
 		temp = ReverseList(temp);
 		PrintList(temp);
 	}
+	cout << "这是反转";
+	
+	PrintList1(temp, 2);
 
 }
 
@@ -57,12 +61,35 @@ Node* ReverseList(Node*head) {
 	pre = NULL;
 	curruent = head;
 	while (curruent) {
+		//存储下一节点地址
 		net = curruent->next;
+		// 更改当前指针指向
 		curruent->next = pre;
+		// 更改节点名称
 		pre = curruent;
+		// 更改当前节点
 		curruent = net;
-
 	}
 	head = pre;
 	return head;
+}
+ 
+void PrintList1(Node* head,int type_code)
+{
+	if (head == NULL) 
+	{		
+		cout << "\n";
+		return;
+	}
+	if (type_code == 1)
+	{
+		PrintList(head->next);
+		cout << head->am;
+	}
+	else if (type_code == 2)
+	{		
+		cout << head->am;
+		PrintList(head->next);
+	}
+
 }

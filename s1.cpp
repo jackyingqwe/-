@@ -66,7 +66,7 @@ Node* ReverseList(Node*head) {
 		net = curruent->next;
 		// 更改当前指针指向
 		curruent->next = pre;
-		// 更改节点名称
+		// 反转更改节点名称
 		pre = curruent;
 		// 更改当前节点
 		curruent = net;
@@ -128,3 +128,4 @@ Node* WriteNode(int x)
 	temp->next = NULL;
 	return temp;
 }
+

@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<stack>
 using namespace std;
 //不知为什么主文件定义了结构体
 //定义结构体

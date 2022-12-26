@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="s1.cpp" />
+    <ClCompile Include="stack12.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head1.h" />

@@ -29,6 +29,5 @@ Node* WriteNode(int x);
 void DoubleInsertHead(Node** head, int x);
 
 
-
-
 //stsck
+void Sqwet31();

@@ -129,3 +129,6 @@ Node* WriteNode(int x)
 	return temp;
 }
 
+
+
+

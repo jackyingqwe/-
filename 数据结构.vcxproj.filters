@@ -21,6 +21,9 @@
     <ClCompile Include="s1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="stack12.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head1.h">

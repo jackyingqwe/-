@@ -2,7 +2,7 @@
 
 int main() 
 {
-	string name;
-	test01();
+	//string name;
+	Sqwet31();
 	return 0;
 }
